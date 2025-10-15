@@ -58,7 +58,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (!empty($rezultat_shfaqur)): ?>
         <h2>Rezultati:</h2>
         <p><strong><?php echo $rezultat_shfaqur; ?></strong></p>
-    <?php endif; ?>
+   <?php endif;<?php
+// ... kodi ekzistues Lek/Euro këtu ...
+
+// =============================================================
+// SHTESA E RE PER DETYREN (Branch: test): Euro ne Dollar
+// Vendose kodin e mëposhtëm brenda këtij blloku PHP
+// =============================================================
+
+// Funksioni i ri
+function euroToDollar($euros) {
+    // Kurse konvertimi shembull (1 Euro = 1.07 Dollar)
+    $rate = 1.07; 
+    $dollars = $euros * $rate;
+    return $dollars;
+}
+
+// Test i shpejtë për të treguar që punon
+$shumaEuro = 50; 
+$shumaDollar = euroToDollar($shumaEuro);
+
+// Mesazh i dukshëm në rast se e teston me terminal
+echo "\n--- Shtuar funksioni i konvertimit Euro ne Dollar (Detyra 2) ---\n";
+echo "$shumaEuro Euro jane: $shumaDollar Dollar Amerikan (USD).\n";
+echo "------------------------------------------------------\n";
+
+// ... kodi tjetër poshtë, nëse ka ...
+
+?>
 
 </body>
 </html>
