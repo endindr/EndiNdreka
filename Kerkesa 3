@@ -1,0 +1,31 @@
+<?php
+
+function shfaqHapatEksperimentit(): void {
+    $hapat = [
+        "Vëzhgimi",
+        "Pyetje",
+        "Hipotezë",
+        "Eksperimenti",
+        "Përkthim të dhënash",
+        "Përfundimi",
+        "Riprovë",
+        "Raportim"
+    ];
+
+    $numer = 1;
+    foreach ($hapat as $hap) {
+        echo $numer . " -> " . $hap . "\n";
+        $numer++;
+    }
+}
+
+shfaqHapatEksperimentit();
+
+// Shfaqja e Numrave 1-8
+echo "\n";
+for ($i = 1; $i <= 8; $i++) {
+    echo $i . "\n";
+}
+
+?>
+
